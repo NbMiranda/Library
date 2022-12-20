@@ -10,16 +10,7 @@ services:
       - data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=app_dev
-      
-  app:
-    image: php:7.3-apache
-    ports:
-      - 8080:80
-    volumes:
-      - /home/nathan/php:/var/www/html/
-    links:
-      - db
+      - MYSQL_DATABASE=app_dev    
   admin:
     image: phpmyadmin/phpmyadmin:latest
     links:
@@ -28,3 +19,12 @@ services:
       - 9090:80
     environment:
       - PMA_ARBITRARY=1
+  app:
+    build: .
+    ports:
+      - 8080:80
+    volumes:
+      - /home/nathan/php:/var/www/html/
+    links:
+      - db
+    

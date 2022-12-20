@@ -1,21 +1,21 @@
 <?php 
 session_start();
-include_once 'conexao.php';
+include('conection.php');
+$conn =conect();
 
-$newWriter = filter_input(INPUT_POST, 'newWriter', FILTER_SANITIZE_STRING);
 
 
-$resultUser = "INSERT INTO writers (writer_name);
-VALUES('$newWriter')";
+$writerName = filter_input(INPUT_POST, 'writerName', FILTER_SANITIZE_STRING);
 
-$result = mysqli_query($conn, $resultUser);
+$sql = $conn->prepare("INSERT INTO writers (writer_name) VALUES('$writerName');");
 
-if (mysqli_insert_id($conn)) {
+$sql->execute();
+
+if($sql){
     $_SESSION['msg'] = "<p class='container' id='book_success'>Escritor cadastrado com sucesso</p>";
-    header("Location: cadastros.php?page=1");
-}else {
-    $_SESSION['msg'] = "<p>Erro!! Escritor não foi cadastrado</p>";
-    header("Location: cadastros.php?page=1");
-}
-
+    header("Location: writerForm.php");
+ }else{
+    $_SESSION['msg'] = "<p>Erro!! Livro não foi cadastrado</p>";
+    header("Location: writerForm.php");
+ }
 ?>
