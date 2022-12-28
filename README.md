@@ -1,14 +1,13 @@
 # Librarty PDO
 
-Para instalar o mysqli
 
-docker exec -ti <your-php-container> sh
->> docker-php-ext-install mysqli 
->> docker-php-ext-enable mysqli
->> apachectl restart
+Instalação do composer necessaria
+
+>>sudo apt install composer
+>>composer require vlucas/phpdotenv
 
 
-INTALANDO PDO
+INTALANDO PDO(caso de erro com o Dockerfile)
 
 >> docker exec -ti <your-php-container> sh
 >> docker-php-ext-install pdo pdo_mysql

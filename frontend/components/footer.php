@@ -8,7 +8,7 @@
             <div class="col-md-4 col-sm-5 ">
                 <ul>
                     <br>
-                    <li><a href="/frontend/page/cadastros.php?page=1">Cadastros</a></li>
+                    <li><a href="/frontend/page/cadastros?page=1">Cadastros</a></li>
                     <li><a href="">Livros</a></li>
                     <li><a href="">Ajuda</a></li>
                 </ul>

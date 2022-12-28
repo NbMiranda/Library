@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '../../backend/connection.php';
+include_once '../../database/connection.php';
 $conn = connect();
 include_once '../components/header.php';
 ?>
@@ -159,10 +159,10 @@ include_once '../components/header.php';
                     $i = 1;
                     while ($count > 0) {
                         if ($page_current == $i) {
-                            echo "<span id='page-nav'><a href='writerForm.php?page=$i'>$i</a></span> ";
+                            echo "<span id='page-nav'><a href='writerForm?page=$i'>$i</a></span> ";
                             
                         } else {
-                            echo "<a href='writerForm.php?page=$i'>$i</a> ";
+                            echo "<a href='writerForm?page=$i'>$i</a> ";
                             
                         }
                         $count = $count - 8;

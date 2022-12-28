@@ -46,7 +46,7 @@
                     disponibilizamos
                     os melhores livros para a sua leitura, nosso catalogo pode não ser tão grande ainda, mas é por
                     pouco tempo,
-                    porque você também pode adicionar um livro aqui na Biblioteca é só ir em <a href="/frontend/page/cadastros.php?page=1">cadastros</a> e pronto. <br> <br>Aqui temos três principais coleções
+                    porque você também pode adicionar um livro aqui na Biblioteca é só ir em <a href="/frontend/page/cadastros?page=1">cadastros</a> e pronto. <br> <br>Aqui temos três principais coleções
                     disponíveis para a sua leitura, começando com a história dos bruxos temos a Coleção <a href="#">
                         Harry Potter</a>, depois indo para o mundo grego com deuses temos a Coleção <a href="#">Pearcy Jackson</a>, e finalizando com as magníficas histórias de terror e suspense
                     com as histórias de <a href="#">Stephen King</a>.

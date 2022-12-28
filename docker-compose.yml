@@ -3,14 +3,14 @@ volumes:
   data:
 services:
   db:
-    image: mysql:5.7
+    image: mysql:${MYSQL_VER}
     ports:
       - "3000:3306"
     volumes:
       - data:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=app_dev    
+      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE:${MYSQL_DATABASE}    
   admin:
     image: phpmyadmin/phpmyadmin:latest
     links:

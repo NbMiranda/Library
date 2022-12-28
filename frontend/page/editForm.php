@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '../../backend/connection.php';
+include_once '../../database/connection.php';
 $conn = connect();
     ?>
 <!DOCTYPE html>
@@ -85,7 +85,7 @@ if ($id > $row[0][0]) {
                 </div>
                 <div class="col-2">
                     <br> <br>
-                    <a href="writerForm.php?page=1" class="btn btn-outline-warning"
+                    <a href="writerForm?page=1" class="btn btn-outline-warning"
                      id="writerButton" style="margin-top:-1.2em;">Novo escritor</a>
                 </div>
             </div>

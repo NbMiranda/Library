@@ -1,7 +1,7 @@
 <?php 
 //editing books from the books table
 session_start();
-include('connection.php');
+include('../database/connection.php');
 $conn =connect();
 
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
@@ -17,9 +17,9 @@ $sql->execute();
 
 if($sql){
     $_SESSION['msg'] = "<p class='container' id='book_success'>Livro editado com sucesso</p>";
-    header("Location: ../frontend/page/cadastros.php?page=1");
+    header("Location: ../frontend/page/cadastros?page=1");
  }else{
     $_SESSION['msg'] = "<p>Erro!! livro não foi cadastrado</p>";
-    header("Location: ../frontend/page/cadastros.php?page=1");
+    header("Location: ../frontend/page/cadastros?page=1");
  }
 ?>

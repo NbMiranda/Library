@@ -1,12 +1,12 @@
 <header id="nav">
     <nav class="navbar fixed-top " style="background-color: #141414;" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="/index.php">
+            <a class="navbar-brand" href="/index">
                 <img src="/assets/imgs/library.png" alt="Bootstrap" width="30" height="24">
                 <span id="orange-text">Biblioteca</span>
             </a>
-            <a class="navbar-brand" href="/frontend/page/writerForm.php?page=1"><span id="orange-text">Escritores</span></a>
-            <a class="navbar-brand" href="/frontend/page/cadastros.php?page=1"><span id="orange-text">Cadastros</span></a>
+            <a class="navbar-brand" href="/frontend/page/writerForm?page=1"><span id="orange-text">Escritores</span></a>
+            <a class="navbar-brand" href="/frontend/page/cadastros?page=1"><span id="orange-text">Cadastros</span></a>
             <!-- <a class="navbar-brand" href="#"><span id="orange-text">asd</span></a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" style="border: none;" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span id="navicon"><img src="/assets/imgs/menu-4-32.ico" alt=""></span>
