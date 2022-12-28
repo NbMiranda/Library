@@ -27,4 +27,3 @@ services:
       - /home/nathan/php:/var/www/html/
     links:
       - db
-    
