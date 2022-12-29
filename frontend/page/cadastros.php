@@ -111,6 +111,59 @@ $conn = connect();
         </form>
     </div>
     <!-- end register form -->
+    <style>
+        h2{
+            align-items: center;
+        }
+    </style>
+    <!-- Collapse Search DB -->
+    <div class="container ">
+        <h2 id='orange-text' class="text-center" style='margin-top: 2em;'>Livros Cadastrados
+        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            ↴
+        </button>
+        </h2>
+        <div class="row ">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body" style="background-color:#141414; font-size: 1.2em;">
+                        <div class="form-group text-center">
+                            <form action="" method="post">
+                                <label for="search" style="font-size: .8em !important;">Pesquise um Livro</label>
+                                <input type="text" class="form-control" name="search" id="search" placeholder="Nome do Livro" style="margin-bottom: 1em;">
+                            </form>
+                            <?php
+                            // $search = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_STRING);
+                            
+                            // if ($search) {
+                            //     $searchBook = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_STRING);
+
+                            //     $sqlSearch = $conn->prepare("SELECT * FROM books WHERE book_name like '%$searchBook%'");
+                            //     $sqlSearch->execute(array());
+                            //     $resultSearch = $sqlSearch->fetchAll();
+
+                            //     $a = count($resultSearch);
+                            //     if (count($resultSearch) === 0) {
+                            //         echo "<span style='color:red;'>Livro não encontrado</span>";    
+                            //     }
+                            //     foreach ($resultSearch as $key) {
+                            //         $name = $key['book_name'];
+                            //         echo "<h5 id='orange-text'>$name  <br></h5>";
+                                    
+                            //     }
+                            // }
+                            ?>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+    <?php
+    ?>
+    
     <?php
     // page limitation
     $page_current = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_NUMBER_INT);
@@ -123,8 +176,8 @@ $conn = connect();
     $sqlPage->execute(array());
     $resultJoin = $sqlPage->fetchAll();
     echo "<div class='container text-center'>
-            <h2 id='orange-text' style='margin: 2em;'>Livros Cadastrados</h2>
-            <div class='row'>
+            
+            <div class='row' style='margin-top:2em;'>
                 
                 <div class='col-3'> <h3>Livro</h3></div>
                 <div class='col-3'> <h3>Autor</h3></div>
@@ -188,6 +241,6 @@ $conn = connect();
     ?>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-
-
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/src/app.js"></script>
 </body>

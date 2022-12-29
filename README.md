@@ -10,7 +10,7 @@ composer require vlucas/phpdotenv
 
 ## INTALANDO PDO(caso de erro com o Dockerfile)
 
-docker exec -ti <your-php-container> sh
+docker exec -ti <php-container> sh
 
 docker-php-ext-install pdo pdo_mysql
 

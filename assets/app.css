@@ -108,3 +108,17 @@ form{
     border-color: #b77905;
     background-color: #ffffff00;
 }
+
+::-webkit-scrollbar-track{
+    background-color: #141414;
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+    
+}
+
+::-webkit-scrollbar-thumb{
+    background: orange;
+    border-radius: 15px;
+}

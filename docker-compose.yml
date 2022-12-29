@@ -3,7 +3,7 @@ volumes:
   data:
 services:
   db:
-    image: mysql:${MYSQL_VER}
+    image: mysql:5.7
     ports:
       - "3000:3306"
     volumes:
