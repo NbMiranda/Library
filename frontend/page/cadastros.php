@@ -133,27 +133,8 @@ $conn = connect();
                                 <label for="search" style="font-size: .8em !important;">Pesquise um Livro</label>
                                 <input type="text" class="form-control" name="search" id="search" placeholder="Nome do Livro" style="margin-bottom: 1em;">
                             </form>
-                            <?php
-                            // $search = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_STRING);
+                            <ul class="resultado"></ul>
                             
-                            // if ($search) {
-                            //     $searchBook = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_STRING);
-
-                            //     $sqlSearch = $conn->prepare("SELECT * FROM books WHERE book_name like '%$searchBook%'");
-                            //     $sqlSearch->execute(array());
-                            //     $resultSearch = $sqlSearch->fetchAll();
-
-                            //     $a = count($resultSearch);
-                            //     if (count($resultSearch) === 0) {
-                            //         echo "<span style='color:red;'>Livro não encontrado</span>";    
-                            //     }
-                            //     foreach ($resultSearch as $key) {
-                            //         $name = $key['book_name'];
-                            //         echo "<h5 id='orange-text'>$name  <br></h5>";
-                                    
-                            //     }
-                            // }
-                            ?>
                         </div> 
                     </div>
                 </div>

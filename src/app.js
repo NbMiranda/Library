@@ -8,7 +8,9 @@ $(function(){
             var dados = {
                 palavra : search
             }
-            $.post('/backend/searchUser.php', dados)
+            $.post('/backend/searchUser.php', dados, function(retorna){
+                $(".resultado").html(retorna);
+            });
         }
 
     })
