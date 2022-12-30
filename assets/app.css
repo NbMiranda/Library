@@ -1,4 +1,4 @@
-#orange-text, a{
+#orange-text, #arrowBtn ,a{
     color: orange !important;
     text-decoration:none !important;
 }
@@ -107,6 +107,13 @@ form{
 #writerButton:hover:hover{
     border-color: #b77905;
     background-color: #ffffff00;
+}
+
+#arrowBtn:hover{
+    color: #b77905;
+    border-color: #b77905;
+    background-color: #ffffff00;
+    transition: .6s;
 }
 
 ::-webkit-scrollbar-track{

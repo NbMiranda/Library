@@ -119,8 +119,24 @@ $conn = connect();
     <!-- Collapse Search DB -->
     <div class="container ">
         <h2 id='orange-text' class="text-center" style='margin-top: 2em;'>Livros Cadastrados
-        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            ↴
+        <button class="btn btn-outline-warning" id="arrowBtn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <!-- ↴ --> <i class="bi bi-caret-down-fill"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg></i>
+
+            <style>
+                #arrowBtn:hover{
+                    color: #b77905;
+                    border-color: #b77905;
+                    background-color: #ffffff00;
+                    transition: .6s;
+                }
+                #arrowBtn{
+                    color: orange;
+                    
+                }
+            </style>
+
         </button>
         </h2>
         <div class="row ">
@@ -128,7 +144,7 @@ $conn = connect();
             <div class="col-4">
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body" style="background-color:#141414; font-size: 1.2em;">
-                        <div class="form-group text-center">
+                        <div class="form-group">
                             <form action="" method="post">
                                 <label for="search" style="font-size: .8em !important;">Pesquise um Livro</label>
                                 <input type="text" class="form-control" name="search" id="search" placeholder="Nome do Livro" style="margin-bottom: 1em;">
