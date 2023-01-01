@@ -9,9 +9,12 @@ $writerNameDel = filter_input(INPUT_POST, 'writerNameDel', FILTER_SANITIZE_NUMBE
 $sqlCheck = $conn->prepare("SELECT * FROM books WHERE writer_id = $writerNameDel");
 $sqlCheck->execute(array());
 $resultCheck = $sqlCheck->fetchAll();
+$livro = $resultCheck[0]['book_name'];
+$id = $resultCheck[0]['id'];
 
 if ($resultCheck[0]['writer_id'] == $writerNameDel ) {
-   $_SESSION['msg'] = "<p class='container' style='color:red;'>Não foi possivel deletar, escritor associado a um livro</p>";
+   $_SESSION['msg'] = "<p class='container' style='color:red;'>Não foi possivel deletar <br> escritor associado ao livro <br>
+     <i><b><a href='/frontend/page/editForm?id=$id' style='text-decoration: underline !important;'>$livro</a></b></i></p>";
    header("Location: ../frontend/page/cadastros?page=1");
 }else {
    $sql = $conn->prepare("DELETE FROM writers WHERE id='$writerNameDel'");
