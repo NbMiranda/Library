@@ -9,8 +9,10 @@ services:
     volumes:
       - data:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE:${MYSQL_DATABASE}    
+      # - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
+      # - MYSQL_DATABASE:${MYSQL_DATABASE} 
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=app_dev   
   admin:
     image: phpmyadmin/phpmyadmin:latest
     links:
@@ -24,6 +26,6 @@ services:
     ports:
       - 8080:80
     volumes:
-      - /home/nathan/php:/var/www/html/
+      - /home/nate/Library:/var/www/html/
     links:
       - db

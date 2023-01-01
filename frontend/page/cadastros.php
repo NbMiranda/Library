@@ -141,15 +141,15 @@ $conn = connect();
         </h2>
         <div class="row ">
             <div class="col-4"></div>
-            <div class="col-4">
+            <div class="col-4" style="padding: 0;">
                 <div class="collapse" id="collapseExample">
-                    <div class="card card-body" style="background-color:#141414; font-size: 1.2em;">
+                    <div class="card card-body" style="background-color:#141414; font-size: 1.2em; border: none; padding:0;">
                         <div class="form-group">
                             <form action="" method="post">
                                 <label for="search" style="font-size: .8em !important;">Pesquise um Livro</label>
                                 <input type="text" class="form-control" name="search" id="search" placeholder="Nome do Livro" style="margin-bottom: 1em;">
                             </form>
-                            <ul class="resultado"></ul>
+                            <ul class="resultado" style="padding:0;"></ul>
                             
                         </div> 
                     </div>

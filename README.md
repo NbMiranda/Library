@@ -1,12 +1,13 @@
-# Librarty PDO
+# Librarty 
 
 
 ## Instalação do composer necessaria
 
 sudo apt install composer
 
-composer require vlucas/phpdotenv
+### Delete a pasta **vendor** e depois rode o comando abaixo na pasta raiz
 
+composer require vlucas/phpdotenv
 
 ## INTALANDO PDO(caso de erro com o Dockerfile)
 

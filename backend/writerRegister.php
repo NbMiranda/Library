@@ -11,7 +11,7 @@ $sql = $conn->prepare("INSERT INTO writers (writer_name) VALUES('$writerName');"
 $sql->execute();
 
 if($sql){
-    $_SESSION['msg'] = "<p class='container' id='book_success'>Escritor cadastrado com sucesso</p>";
+    $_SESSION['msg'] = "<p id='book_success'>Escritor cadastrado com sucesso</p>";
     header("Location: ../frontend/page/writerForm?page=1");
  }else{
     $_SESSION['msg'] = "<p>Erro!! escritor não foi cadastrado</p>";
